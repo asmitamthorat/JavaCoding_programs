@@ -10,7 +10,6 @@ package javaPractice;
  *since 25/08/2020
  ***********************************************************************************************/
 
-
 public class empWageCalculation_DAY19 {
 	
 	public static void main (String[] args) {
@@ -23,7 +22,4 @@ public class empWageCalculation_DAY19 {
 			System.out.println("employee is absent");
 		}
 	}
-
-	
-
 }
