@@ -1,7 +1,7 @@
 package javaPractice;
 
 /************************************************************************************************
- * purpose: To perform Employee wage computation
+ * purpose: To perform Employee wage calculation
  *
  * 
  * @author asmita thorat
@@ -22,5 +22,4 @@ public class empWageCalculation_DAY22 {
 			System.out.println("employee is absent");
 		}
 	}
-
 }
