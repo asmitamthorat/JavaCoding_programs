@@ -12,19 +12,16 @@ package javaPractice;
 
 public class empWageCalculation_DAY22 {
 
-	public static final int isFullTime=2;
 	public static final int isPartTime=1;
-	public static final int empRatePerHour=20;
-	public static final int numOf_workingDays=20;
-	public static final int maxHrs_inMonth=100;
+	public static final int isFullTime=2;
 	
-	public static int computeEmpWage() {
+	public static int computeEmpWage(String company, int empRatePerHour,int numOf_workingDays, int maxHrs_inMonth) {
 		//Variables
 		int empHours=0;
 		int empWage=0;
-		int totalEmpHour=0;
+	
 		int totalWorkingDays=0;
-		int totalEmpWage=0;
+		int totalEmpHour=0;
 		//Computation
 		while (totalEmpHour<=maxHrs_inMonth &&  totalWorkingDays<numOf_workingDays) {
 			totalWorkingDays=totalWorkingDays+1;
@@ -39,20 +36,22 @@ public class empWageCalculation_DAY22 {
 				default:
 					empHours=0;
 		}
-			totalEmpHour=totalEmpHour+1;
-			empWage=empHours*empRatePerHour;		// wage for a single day
-			totalEmpWage=totalEmpWage+empWage;
-			//System.out.println("Emp Wage: " +empWage);	
+			totalEmpHour=totalEmpHour+empHours;
+			System.out.println("Days#:"+totalWorkingDays + "Emp Hr: " +empHours);
+			
+			
+				
 			
 	}			
-		
-		System.out.println("Total employee wage: " +totalEmpWage);	//printing the employee wage
+		int totalEmpWage=totalEmpHour*empRatePerHour;
+		System.out.println("Total employee wage: " +company+" is : "+totalEmpWage);	//printing the employee wage
 		return totalEmpWage;
 		
 	}
 	
 	public static void main(String[] args) {
-		computeEmpWage();
+		computeEmpWage("Dmart",20,2,10);
+		computeEmpWage("Reliance",10,4,20);
 	}
 
 }
