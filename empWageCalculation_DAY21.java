@@ -1,7 +1,7 @@
 package javaPractice;
 
 /************************************************************************************************
- * purpose: To perform Employee wage computation
+ * purpose: To perform Employee wage calculation
  *
  * 
  * @author asmita thorat
@@ -17,7 +17,8 @@ public class empWageCalculation_DAY21 {
 	public static final int empRatePerHour=20;
 	public static final int numOf_workingDays=20;
 	public static final int maxHrs_inMonth=100;
-	public static void main (String[] args) {
+	
+	public static int computeEmpWage() {
 		//Variables
 		int empHours=0;
 		int empWage=0;
@@ -41,9 +42,16 @@ public class empWageCalculation_DAY21 {
 			totalEmpHour=totalEmpHour+1;
 			empWage=empHours*empRatePerHour;		// wage for a single day
 			totalEmpWage=totalEmpWage+empWage;
-			System.out.println("Emp Wage: " +empWage);		
+			//System.out.println("Emp Wage: " +empWage);	
+			
 	}			
 		
-		System.out.println("Total employee wage: " +totalEmpWage);		//printing the employee wage
+		System.out.println("Total employee wage: " +totalEmpWage);	//printing the employee wage
+		return totalEmpWage;
+		
+	}
+	
+	public static void main(String[] args) {
+		computeEmpWage();
 	}
 }
