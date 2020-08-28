@@ -13,14 +13,19 @@ package javaPractice;
 public class empWageCalculation_DAY22 {
 
 	public static void main (String[] args) {
-		int CheckPresence = 1;
-		double empCheck = Math.floor(Math.random()*10)%2;
-		if (empCheck == CheckPresence) {						//checking whether employee is present or absent
-			System.out.println("employee is present");
+
+		int isFullTime=1;
+		int emp_rate_per_hour=20;
+		int empHours=0;
+		int empWage=0;
+		double empCheck = Math.floor(Math.random()*10)%2;   //computation to generate random for employee shift
+		if (empCheck == isFullTime) {
+			empHours=8;
 		}
 		else {
-			System.out.println("employee is absent");
+			empHours=0;
 		}
+		empWage=empHours*emp_rate_per_hour;
+		System.out.println("Emp Wage: " +empWage);			//printing the employee wage
 	}
-
 }
