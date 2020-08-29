@@ -100,6 +100,7 @@ public int getTotalWage(String company) {
 			}
 			totalEmpHrs=totalEmpHrs+empHrs;
 			System.out.println("Days :"+totalWorkingDays + "Emp Hr: " +empHrs);
+			System.out.println("Employee Wage for a day:"+(empHrs*companyEmpWage.empRatePerHour));
 		}
 		return totalEmpHrs*companyEmpWage.empRatePerHour;
 	}
