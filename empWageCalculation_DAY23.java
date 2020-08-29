@@ -1,5 +1,6 @@
 package javaPractice;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -48,11 +49,11 @@ public class empWageCalculation_DAY23 implements IComputeEmpWage {
 	public static final int isFullTime=2;
 	
 	private int numOfCompany=0;
-	private LinkedList<CompanyEmpWage> companyEmpWageList;
+	private ArrayList<CompanyEmpWage> companyEmpWageList;
 	private Map<String,CompanyEmpWage> companyToEmpWageMap;
 		
 	public empWageCalculation_DAY23() {
-		companyEmpWageList=new LinkedList<>();
+		companyEmpWageList=new ArrayList<>();				//using array list to manage company employee list
 		companyToEmpWageMap=new HashMap<>();
 	}
 	
@@ -100,7 +101,6 @@ public int getTotalWage(String company) {
 			}
 			totalEmpHrs=totalEmpHrs+empHrs;
 			System.out.println("Days :"+totalWorkingDays + "Emp Hr: " +empHrs);
-			System.out.println("Employee Wage for a day:"+(empHrs*companyEmpWage.empRatePerHour));
 		}
 		return totalEmpHrs*companyEmpWage.empRatePerHour;
 	}
